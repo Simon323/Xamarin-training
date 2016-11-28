@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HelloWorld.Example">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HelloWorld.HomePage" Title="Home Page">
 	<StackLayout BackgroundColor="White" 
 				Padding="30" 
 				VerticalOptions="Center" >
@@ -14,5 +14,9 @@
 		<Label x:Name="MainLabel" 
 			TextColor="Gray" 
 			FontSize="60" />
+		<Button Text="Navigate to first page" 
+			Clicked="NavigationButton_Clicked" 
+			BackgroundColor="Blue" 
+			TextColor="White" />
 	</StackLayout>
 </ContentPage>

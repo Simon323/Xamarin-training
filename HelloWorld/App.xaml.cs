@@ -24,7 +24,19 @@ namespace HelloWorld
 			//	}
 			//};
 
-			MainPage = new Example();
+			//MainPage = new Example();
+
+			//MainPage = new NavigationPage(new HomePage());
+
+			//MainPage = new TabbedPage
+			//{
+			//	Children = {
+			//		new HomePage(),
+			//		new FirstPage("Hello")
+			//	}
+			//};
+
+			MainPage = new ListViewPage();
 		}
 
 		protected override void OnStart()
