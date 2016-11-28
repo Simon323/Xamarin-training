@@ -6,9 +6,25 @@ namespace HelloWorld
 	{
 		public App()
 		{
-			InitializeComponent();
+			//InitializeComponent();
 
-			MainPage = new HelloWorldPage();
+			//MainPage = new HelloWorldPage();
+
+			//MainPage = new ContentPage
+			//{
+			//	Content = new StackLayout
+			//	{
+			//		VerticalOptions = LayoutOptions.Center, 
+			//		Children = {
+			//			new Label {
+			//				HorizontalTextAlignment = TextAlignment.Center,
+			//				Text = "Welcome in west world"
+			//			}
+			//		}
+			//	}
+			//};
+
+			MainPage = new Example();
 		}
 
 		protected override void OnStart()
