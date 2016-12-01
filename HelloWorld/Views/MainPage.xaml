@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="HelloWorld.MainPage"
+			xmlns:viewModels="clr-namespace:HelloWorld.ViewModels;assembly=HelloWorld">
+	<ContentPage.BindingContext>
+		<viewModels:MainPageViewModel />
+	</ContentPage.BindingContext>
+	<StackLayout Orientation="Vertical"
+				Spacing="20"
+				VerticalOptions="Center">
+		<Label Text="Xamarin | MVVM" 
+				TextColor="Maroon"
+				FontSize="40" />
+		<Entry  Text="{Binding Name}"
+				FontSize="50"
+				Placeholder="your name" />
+		<Button Text="Say Hello" 
+				TextColor="White"
+				BackgroundColor="Teal"
+				FontSize="40"
+				Command="{Binding SayHelloCommand}"/>
+		<Label  Text="{Binding HelloMessage}"
+				FontSize="40"
+				TextColor="Navy" />
+	</StackLayout>
+</ContentPage>

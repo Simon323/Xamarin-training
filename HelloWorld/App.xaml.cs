@@ -36,7 +36,9 @@ namespace HelloWorld
 			//	}
 			//};
 
-			MainPage = new ListViewPage();
+			//MainPage = new ListViewPage();
+
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart()
