@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using HelloWorld.Views;
+using Xamarin.Forms;
 
 namespace HelloWorld
 {
@@ -38,7 +39,7 @@ namespace HelloWorld
 
 			//MainPage = new ListViewPage();
 
-			MainPage = new MainPage();
+			MainPage = new StylesPage();
 		}
 
 		protected override void OnStart()

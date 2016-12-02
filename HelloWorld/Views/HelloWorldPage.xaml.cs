@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace HelloWorld
+namespace HelloWorld.Views
 {
 	public partial class HelloWorldPage : ContentPage
 	{

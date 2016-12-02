@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace HelloWorld.Views
 {
-	public partial class FirstPage : ContentPage
+	public partial class StylesPage : ContentPage
 	{
-		public FirstPage(string param)
+		public StylesPage()
 		{
 			InitializeComponent();
-			MainLabel.Text = param;
 		}
 	}
 }

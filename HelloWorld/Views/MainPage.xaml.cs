@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace HelloWorld
+namespace HelloWorld.Views
 {
 	public partial class MainPage : ContentPage
 	{
@@ -11,11 +11,5 @@ namespace HelloWorld
 		{
 			InitializeComponent();
 		}
-
-		//public void Button_OnClicked(object sender, EventArgs e)
-		//{
-		//	var name = NameEntry.Text;
-		//	HelloLabel.Text = name;
-		//}
 	}
 }

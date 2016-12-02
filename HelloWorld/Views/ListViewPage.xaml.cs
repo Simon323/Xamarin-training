@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using HelloWorld.Models;
 using Xamarin.Forms;
 
-namespace HelloWorld
+namespace HelloWorld.Views
 {
 	public partial class ListViewPage : ContentPage
 	{
