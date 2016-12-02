@@ -5,11 +5,12 @@ using Xamarin.Forms;
 
 namespace HelloWorld.Views
 {
-	public partial class StylesPage : ContentPage
+	public partial class TaskPage : ContentPage
 	{
-		public StylesPage()
+		public TaskPage()
 		{
 			InitializeComponent();
+			BindingContext = new TaskViewModel();
 		}
 	}
 }

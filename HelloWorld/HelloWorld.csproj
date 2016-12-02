@@ -52,6 +52,9 @@
     <EmbeddedResource Include="Views\StylesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TaskPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -83,6 +86,11 @@
     </Compile>
     <Compile Include="Views\StylesPage.xaml.cs">
       <DependentUpon>StylesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaskModel.cs" />
+    <Compile Include="ViewModels\TaskViewModel.cs" />
+    <Compile Include="Views\TaskPage.xaml.cs">
+      <DependentUpon>TaskPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
