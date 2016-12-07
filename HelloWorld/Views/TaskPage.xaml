@@ -35,8 +35,9 @@
 			<Label.TextColor>
 				<OnPlatform x:TypeArguments="Color"
 					Android="Red"
-					iOS="White"/>
+					iOS="Green"/>
 			</Label.TextColor>
+
 		</Label>
 	</StackLayout>
 	

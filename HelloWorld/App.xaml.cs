@@ -41,7 +41,9 @@ namespace HelloWorld
 
 			//MainPage = new StylesPage();
 
-			MainPage = new TaskPage();
+			//MainPage = new TaskPage();
+
+			MainPage = new AlertPage();
 		}
 
 		protected override void OnStart()
