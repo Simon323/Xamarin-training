@@ -24,7 +24,20 @@
 
 		<Label Text="{Binding Message}"
 				TextColor="{Binding Message, Converter={StaticResource TextToColorConverter}}"/>
-		
+
+		<Label VerticalOptions="Center"
+				HorizontalOptions="Center">
+			<Label.Text>
+				<OnPlatform x:TypeArguments="x:String"
+					Android="Andoid App"
+					iOS="iOS App"/>
+			</Label.Text>
+			<Label.TextColor>
+				<OnPlatform x:TypeArguments="Color"
+					Android="Red"
+					iOS="White"/>
+			</Label.TextColor>
+		</Label>
 	</StackLayout>
 	
 </ContentPage>
