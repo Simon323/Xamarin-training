@@ -2,16 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		x:Class="HelloWorld.Views.TaskPage"
-		BackgroundColor="Navy">
+		BackgroundColor="Navy"
+		xmlns:converters="clr-namespace:HelloWorld.Converters;assembly=HelloWorld">
 
-	<StackLayout>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:TextToColorConverter x:Key="TextToColorConverter"/>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	
+	<StackLayout VerticalOptions="Center">
 
 		<Label Text="Title of the task"/>
-		<Entry Text="{Binding Task.Title}"/>
+		<Entry Text="{Binding Task.Title, Mode=TwoWay}"/>
 
 		<Label Text="Duration of the task"/>
-		<Entry Text="{Binding Task.Duration}"/>
+		<Entry Text="{Binding Task.Duration, Mode=TwoWay}"/>
 
+		<Button Text="Save task"
+				Command="{Binding SaveCommand}"/>
+
+		<Label Text="{Binding Message}"
+				TextColor="{Binding Message, Converter={StaticResource TextToColorConverter}}"/>
 		
 	</StackLayout>
 	
