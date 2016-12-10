@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Acr.UserDialogs;
 using Xamarin.Forms;
 
 namespace HelloWorld.ViewModels
@@ -34,7 +35,6 @@ namespace HelloWorld.ViewModels
 			{
 				return new Command(() =>
 				{
-
 				});
 			}
 		}

@@ -1,4 +1,6 @@
-﻿using HelloWorld.Views;
+﻿
+using Acr.UserDialogs;
+using HelloWorld.Views;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -44,6 +46,7 @@ namespace HelloWorld
 			//MainPage = new TaskPage();
 
 			MainPage = new AlertPage();
+
 		}
 
 		protected override void OnStart()
