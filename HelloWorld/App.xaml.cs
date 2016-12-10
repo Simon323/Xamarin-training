@@ -1,6 +1,7 @@
 ﻿
 using Acr.UserDialogs;
 using HelloWorld.Views;
+using HelloWorld.Views.SimpleLogin;
 using Xamarin.Forms;
 
 namespace HelloWorld
@@ -45,8 +46,9 @@ namespace HelloWorld
 
 			//MainPage = new TaskPage();
 
-			MainPage = new AlertPage();
+			//MainPage = new AlertPage();
 
+			MainPage = new NavigationPage(new WelcomePage());
 		}
 
 		protected override void OnStart()
