@@ -1,19 +1,17 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using Acr.UserDialogs;
+using HelloWorld.ViewModels.Services;
 using Xamarin.Forms;
 
 namespace HelloWorld.ViewModels
 {
-	public class AlertPageViewModel : INotifyPropertyChanged
+	public class AlertPageViewModel : BaseViewModel
 	{
 		private string _name;
-
-		public AlertPageViewModel()
-		{
-			Name = "Jay Garrick";
-		}
+		private readonly IMessageService _messageService;
 
 		public string Name
 		{
@@ -25,25 +23,24 @@ namespace HelloWorld.ViewModels
 			set
 			{
 				_name = value;
-				OnPropertyChanged();
+				OnPropertyChanged("Name");
 			}
 		}
 
-		public Command ShowAlert
+		public ICommand ShowAlertCommand { get; set; }
+
+	
+
+		public AlertPageViewModel()
 		{
-			get
-			{
-				return new Command(() =>
-				{
-				});
-			}
+			Name = "Jay Garrick";
+			ShowAlertCommand = new Command(ShowAlert);
+			_messageService = DependencyService.Get<IMessageService>();
 		}
 
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+		private void ShowAlert()
 		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+			_messageService.ShowAsync("to jest super fajne");
 		}
 	}
 }

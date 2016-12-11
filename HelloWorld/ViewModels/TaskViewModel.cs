@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace HelloWorld.ViewModels
 {
-	public class TaskViewModel : INotifyPropertyChanged
+	public class TaskViewModel : BaseViewModel
 	{
 		private TaskModel _task;
 		private string _message;
@@ -58,13 +58,6 @@ namespace HelloWorld.ViewModels
 					Message = String.Concat("Yout task ", Task.Title, " ,", Task.Duration, " was successfully saved !");  
 				});
 			}
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }

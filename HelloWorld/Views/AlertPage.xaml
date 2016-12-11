@@ -7,15 +7,21 @@
 	<ContentPage.BindingContext>
 		<viewModels:AlertPageViewModel />
 	</ContentPage.BindingContext>
-	
-	<StackLayout VerticalOptions="Center"
+
+	<ContentPage.Content>
+
+		<StackLayout VerticalOptions="Center"
 				HorizontalOptions="Center">
 
-		<Entry Placeholder="Name"
-				Text="{Binding Name, Mode=TwoWay}"/>
+			<Entry Placeholder="Name"
+					Text="{Binding Name, Mode=TwoWay}"/>
 
-		<Button Text="Save"
-				Command="{Binding ShowAlert}"/>
+			<Button Text="Save"
+					Command="{Binding ShowAlertCommand}"/>
+			
+		</StackLayout>
 		
-	</StackLayout>
+	</ContentPage.Content>
+	
+
 </ContentPage>

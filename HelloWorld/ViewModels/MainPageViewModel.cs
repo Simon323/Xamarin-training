@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace HelloWorld.ViewModels
 {
-	public class MainPageViewModel : INotifyPropertyChanged
+	public class MainPageViewModel : BaseViewModel
 	{
 		private string _helloMessage;
 		public string Name { get; set; }
@@ -30,13 +30,6 @@ namespace HelloWorld.ViewModels
 					HelloMessage = String.Concat("Hello ", Name);
 				});
 			}
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }
